@@ -1,1 +1,21 @@
-<p>customer-details works!</p>
+<h2>Employee Details</h2> 
+
+<hr/>
+<div *ngIf="employee">
+  <div>
+    <label><b>First Name: </b></label> {{customer.firstName}}
+  </div>
+  <div>
+    <label><b>Last Name: </b></label> {{customer.lastName}}
+  </div>
+  <div>
+    <label><b>MobileNumber: </b></label> {{customer.mobileNumber}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="back()" class="btn btn-success">Back to Customer List</button><br>
+
+
+

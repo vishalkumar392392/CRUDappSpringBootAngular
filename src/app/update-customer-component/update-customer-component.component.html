@@ -1,1 +1,22 @@
-<p>update-customer-component works!</p>
+<h3>Update Customer</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">First Name</label>
+      <input type="text" class="form-control" id="firstName" required [(ngModel)]="customer.firstName" name="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Last Name</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="customer.lastName" name="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">MobileNumber</label>
+      <input type="text" class="form-control" id="mobileNumber" required [(ngModel)]="customer.mobileNumber" name="mobileNumber">
+    </div>
+
+    <button type="submit" class="btn btn-success">Update</button>
+  </form>
+</div>
+
