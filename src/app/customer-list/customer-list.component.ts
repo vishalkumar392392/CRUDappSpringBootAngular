@@ -13,13 +13,14 @@ export class CustomerListComponent implements OnInit {
 
   // customers:Observable<Customer[]>;
   customers:Observable<Customer[]>;
-  constructor(private customerService:CustomerService,
-    private router:Router) { }
+  constructor(private customerService?:CustomerService,
+    private router?:Router) { 
+     
+    }
 
   ngOnInit() {
    this.reloadData();
     
-
   }
 
   reloadData(){
@@ -29,7 +30,7 @@ export class CustomerListComponent implements OnInit {
       this.customerService.deleteCustomer(id)
       .subscribe(data=>{
         console.log(data);
-        this.reloadData;
+        this.reloadData();
       },
       error=>{console.log(error)});
    }

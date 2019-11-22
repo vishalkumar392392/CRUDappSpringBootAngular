@@ -7,6 +7,5 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title = "Welcome to Cbre";
-  img =
-    "https://www.google.com/search?q=cbre&sxsrf=ACYBGNSi_vKg8pz2TdjO89oY8Zkuk0E1Gw:1574277291401&source=lnms&tbm=isch&sa=X&ved=2ahUKEwil_Oz1v_nlAhUMgI8KHVcOB5IQ_AUoA3oECBQQBQ&biw=1536&bih=711#imgrc=S46p861wakIkTM:";
+ image:string =" https://www.google.com/search?q=CBRE&rlz=1C1GCEU_enIN869IN869&sxsrf=ACYBGNRfczfrTf79wzfa0PcU2J2Nv7S38A:1574413008494&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj5oufAuf3lAhVMYo8KHUUPAcUQ_AUoA3oECBQQBQ&biw=1366&bih=657#imgrc=S46p861wakIkTM:"
 }

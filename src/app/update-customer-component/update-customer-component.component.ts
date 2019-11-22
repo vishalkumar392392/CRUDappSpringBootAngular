@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Customer } from '../customer';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CustomerService } from '../customer.service';
+import { CustomerListComponent } from '../customer-list/customer-list.component';
 
 @Component({
   selector: 'app-update-customer-component',
@@ -10,6 +11,7 @@ import { CustomerService } from '../customer.service';
 })
 export class UpdateCustomerComponentComponent implements OnInit {
   customer:Customer;
+  customerListComponent:CustomerListComponent;
   id:number;
   constructor(private route:ActivatedRoute,
     private router:Router,private customerService:CustomerService) { }
@@ -31,6 +33,8 @@ export class UpdateCustomerComponentComponent implements OnInit {
      this.customerService.updateCustomer(this.id,this.customer)
      .subscribe(data=>console.log(data), error=>console.log(error));
      this.customer=new Customer();
+     
+     
      this.gotoList();
   }
 

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class CustomerService{
   
-    private baseUrl = 'http://localhost:8080/vishal/app/customers';
+    private baseUrl = 'http://localhost:8080/vishal-application/app/customers';
 
     constructor(private http:HttpClient){
 
