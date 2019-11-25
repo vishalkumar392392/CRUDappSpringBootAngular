@@ -1,4 +1,174 @@
-<div class="container">
+
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div *ngIf="form.errors" class="alert alert-danger">
+    The firstName or lastname is invalid
+  </div>
+  <div class="form-group">
+    <label for="firstName">FirstName</label>
+    <input
+      formControlName="firstName"
+      id="firstName"
+      type="text"
+      class="form-control"
+    />
+    <div
+      *ngIf="form.get('firstName').touched && form.get('firstName').invalid"
+      class="alert alert-danger"
+    >
+      <div *ngIf="form.get('firstName').errors.required">
+        firstName is required
+      </div>
+
+      <div *ngIf="form.get('firstName').errors.minlength">
+        firstName should be minimum
+        {{ form.get("firstName").errors.minlength.requiredLength }} characters
+      </div>
+      <div *ngIf="form.get('firstName').errors.cannotContainSpace">
+        firstName cannot contain space
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="lastName">LastName</label>
+    <input
+      formControlName="lastName"
+      id="lastName"
+      type="text"
+      class="form-control"
+    />
+    <div
+      *ngIf="form.get('lastName').touched && form.get('lastName').invalid"
+      class="alert alert-danger"
+    >
+      <div *ngIf="form.get('lastName').errors.required">
+        lastName is required
+      </div>
+
+      <div *ngIf="form.get('lastName').errors.minlength">
+        lastName should be minimum
+        {{ form.get("lastName").errors.minlength.requiredLength }} characters
+      </div>
+      <div *ngIf="form.get('firstName').errors.cannotContainSpace">
+        lastName cannot contain space
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="mobileNumber">MobileNumber</label>
+    <input
+      formControlName="mobileNumber"
+      id="mobileNumber"
+      type="text"
+      class="form-control"
+    />
+    <div
+      *ngIf="form.get('mobileNumber').touched && form.get('mobileNumber').invalid"
+      class="alert alert-danger"
+    >
+      <div *ngIf="form.get('mobileNumber').errors.required">
+        mobileNumber is required
+      </div>
+
+      <div *ngIf="form.get('mobileNumber').errors.minlength">
+        mobileNumber should be minimum
+        {{ form.get("mobileNumber").errors.minlength.requiredLength }} characters
+      </div>
+      <div *ngIf="form.get('firstName').errors.cannotContainSpace">
+        mobileNumber cannot contain space
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-success" type="submit" [disabled]="!form.valid">Add Customer</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
   <form (ngSubmit)="submit()">
     <div class="form-group">
       <label for="firstName">Firstname</label>
@@ -35,4 +205,4 @@
     </div>
     <button type="submit" class="btn btn-outline-success">Submit</button>
   </form>
-</div>
+</div> -->

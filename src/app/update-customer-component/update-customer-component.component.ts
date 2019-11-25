@@ -31,9 +31,9 @@ export class UpdateCustomerComponentComponent implements OnInit {
   onSubmit(){
     
      this.customerService.updateCustomer(this.id,this.customer)
-     .subscribe(data=>console.log(data), error=>console.log(error));
-     this.customer=new Customer();
-     
+     .subscribe(data=>console.log('data in onSubmit() ', data), error=>console.log(error));
+    //  this.customer=new Customer();
+  
      
      this.gotoList();
   }

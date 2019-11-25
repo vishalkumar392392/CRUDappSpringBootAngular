@@ -17,14 +17,18 @@ export class CustomerListComponent implements OnInit {
     private router?:Router) { 
      
     }
-
+    ngOnChanges(){
+      this.reloadData();
+    }
   ngOnInit() {
    this.reloadData();
     
   }
 
   reloadData(){
-    this.customers = this.customerService.getCustomersList();
+     this.customerService.getCustomersList().subscribe(data=>{
+      this.customers =data;
+      console.log(data)})
   }
    deleteCustomer(id:number){
       this.customerService.deleteCustomer(id)

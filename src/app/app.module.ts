@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, FormGroup, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from "./app.component";
 import { RouterModule, Routes } from "@angular/router";
@@ -10,6 +10,8 @@ import { DeleteCustomerComponentComponent } from "./delete-customer-component/de
 import { WelcomeComponentComponent } from "./welcome-component/welcome-component.component";
 import { CustomerListComponent } from "./customer-list/customer-list.component";
 import { CustomerDetailsComponent } from "./customer-details/customer-details.component";
+import{MatIconModule,MatButtonModule} from "@angular/material"
+import{BrowserAnimationsModule} from "@angular/platform-browser/animations"
 const routes: Routes = [
   { path: "", component: WelcomeComponentComponent },
   { path: "customers", component: CustomerListComponent },
@@ -25,9 +27,11 @@ const routes: Routes = [
     DeleteCustomerComponentComponent,
     WelcomeComponentComponent,
     CustomerListComponent,
+    
     CustomerDetailsComponent
   ],
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes), HttpClientModule],
+  imports: [BrowserModule,BrowserAnimationsModule, FormsModule,ReactiveFormsModule, RouterModule.forRoot(routes), HttpClientModule,MatIconModule,
+  MatButtonModule],
   providers: [],
   bootstrap: [AppComponent]
 })
